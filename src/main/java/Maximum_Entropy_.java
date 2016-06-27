@@ -52,6 +52,7 @@ public class Maximum_Entropy_ implements PlugInFilter{
         int[] hist = ip.getHistogram();
         entropy = new double[hist.length];
         int threshold = entropySplit(hist);
+        IJ.log("T = " + threshold);
         ip.threshold(threshold);
         int sum = ip.getPixelCount();
         if(isShowHistogram){
